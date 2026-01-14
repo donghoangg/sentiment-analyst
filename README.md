@@ -29,16 +29,20 @@ Sentiment-Analysis-Vietnamese/
 - Dữ liệu được thu thập từ Kaggle
 ### 2. **Tiền Xử Lý Dữ Liệu**
 - **Chuẩn hóa teencode**: 50+ từ viết tắt phổ biến (ko→không, dc→được, etc.)
+- Chuyển đối dữ liệu thô thành dạng dictionary : id, review, label.
+- Xử lý việc mất cân bằng dữ liệu, đảm bảo dữ liệu không bị lệch nhau quá nhiều giữa hai nhãn
 - **Vietnamese Character Support**: Hỗ trợ đầy đủ ký tự tiếng Việt
 ### 3. Xây dựng các mô hình
 - Sử dụng TF-IDF để trích xuất vector cho hai mô hình SVM và BERT
-- Sử dụng SVM để tiến hành phân loại
+- Sử dụng SVM để tiến hành phân loại (với C=1 và kernel = 'linear')
 - SỬ dụng BERT để tiến hành phân loại
 - Xây dựng mô hình PhoBERT cho việc phân loại tiếng Việt
 
 ## 🎯 Kết quả 
+- Các mô hình đã thực hiện phân loại được các comment đơn giản, các câu đơn rõ nghĩa
+- Mô hình PhoBERT thể hiện sự ưu việt tuyệt đối với Accuracy đạt 90.86%
+- Tuy nhiên còn có sai sót khi thực hiện phân loại với những câu ghép dài dòng và có nhiều ý nghĩa
 
-Mô hình PhoBERT thể hiện sự ưu việt tuyệt đối với Accuracy đạt 90.86%
 
 
 ## 📝 License
